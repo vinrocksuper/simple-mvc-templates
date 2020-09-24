@@ -15,7 +15,7 @@ app.use('/assets', express.static(path.resolve(`${__dirname}/../client/`)));
 app.use(favicon(`${__dirname}/../hosted/img/favicon.png`));
 
 app.use(compression());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(cookieParser());
